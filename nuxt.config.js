@@ -34,6 +34,15 @@ export default {
   components: true,
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: ["@nuxtjs/tailwindcss"],
+  tailwindcss: {
+    config: {
+      purge: {
+        content: [
+          "slices/**/**.vue"
+        ]
+      }
+    }
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [["@nuxtjs/prismic", {
     endpoint: smConfig.apiEndpoint || "",
